@@ -25,7 +25,7 @@
 
 
   <title>Benchmarking Robustness of Compositional Image Retrieval</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/fighting.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -126,20 +126,20 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
+<!-- <section class="hero teaser"> -->
+  <!-- <div class="container is-max-desktop"> -->
+    <!-- <div class="hero-body"> -->
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
+        <!-- <source src="static/videos/banner_video.mp4" -->
+        <!-- type="video/mp4"> -->
+      <!-- </video> -->
+      <!-- <h2 class="subtitle has-text-centered"> -->
+        <!-- Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.  -->
+      <!-- </h2> -->
+    <!-- </div> -->
+  <!-- </div> -->
+<!-- </section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -150,7 +150,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Compositional image retrieval (CIR) aims to retrieve a target image through a query specified by an input image paired with text describing desired modifications to the input image. CIR has recently attracted attention for its ability to express precise adjustments to the input image by leveraging both information-rich images and concise natural language instructions. In real-world applications, reference images can deviate from the original distribution, and textual descriptions can also be diverse due to different users. Despite its current success, the robustness of popular CIR methodologies to either (1) real-world corruptions or (2) variations of the textual descriptions have never been systematically evaluated. In this paper, we perform the first robustness study of CIR, establishing three new diverse benchmarks for a systematic evaluation of robustness to corruption (in both the textual and visual domains) in compositional image retrieval, further probing textual understanding. For analysis of natural image corruption, we introduce two new large-scale benchmark datasets, CIRR-C and FashionIQ-C, for the open domains and fashion domains respectively–both of which feature 75 visual corruptions and 35 textual corruptions. Finally, to facilitate robust evaluation of text understanding, we introduce a new diagnostic dataset CIRR-D by expanding the CIRR dataset with synthetic data. CIRR-D’s textual descriptions are carefully modified to better probe text understanding across a range of factors: numerical variations, attribute variation, object removal, and background variation. We provide a testbed to benchmark ten published models, revealing how the composition of visual and textual modalities contributes to robustness.
           </p>
         </div>
       </div>
@@ -167,32 +167,58 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/figures/natural_corruptions.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          CIRR-C and FashionIQ-C visualization.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/figures/CIRR_D_result.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          CIRR-D visualization.
+        </h2>
+      </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/figures/cirr_c_natural.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Relative robustness in CIRR-C.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/figures/zzz.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
+          Relative robustness in FashionIQ-C.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/figures/pretrain_size_neurips.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Relative robustness vs. Recall in CIRR-C, circle size is the size of pretrained dataset.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/figures/model_size_neur.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Relative robustness vs. Recall in CIRR-C, circle size is indicates model parameters.
+        </h2>
+      </div>
   </div>
 </div>
 </div>
@@ -201,29 +227,29 @@
 
 
 
-
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+      <!-- <h2 class="title is-3">Video Presentation</h2> -->
+      <!-- <div class="columns is-centered has-text-centered"> -->
+        <!-- <div class="column is-four-fifths"> -->
           
-          <div class="publication-video">
+          <!-- <div class="publication-video"> -->
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+<!-- </section> -->
+<!-- End youtube video
 
 
 <!-- Video carousel -->
+<!-- 
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -232,6 +258,7 @@
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
+              <!-- 
             <source src="static/videos/carousel1.mp4"
             type="video/mp4">
           </video>
@@ -239,6 +266,7 @@
         <div class="item item-video2">
           <video poster="" id="video2" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
+            <!-- 
             <source src="static/videos/carousel2.mp4"
             type="video/mp4">
           </video>
@@ -246,6 +274,7 @@
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
             <!-- Your video file here -->
+            
             <source src="static/videos/carousel3.mp4"
             type="video/mp4">
           </video>
@@ -253,7 +282,8 @@
       </div>
     </div>
   </div>
-</section>
+</section> 
+-->
 <!-- End video carousel -->
 
 
@@ -262,7 +292,7 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -272,17 +302,17 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
+  <!-- <section class="section" id="BibTeX"> -->
+    <!-- <div class="container is-max-desktop content"> -->
+      <!-- <h2 class="title">BibTeX</h2> -->
+      <!-- <pre><code>BibTex Code Here</code></pre> -->
+    <!-- </div> -->
+<!-- </section> -->
 <!--End BibTex citation -->
 
 
